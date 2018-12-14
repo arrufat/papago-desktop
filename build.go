@@ -51,10 +51,9 @@ func buildDarwin() {
 		log.Fatal(err)
 	}
 	fmt.Println(stdout.String())
-
 }
 
 func main() {
 	buildWindows()
-	buildDarwin()
+	// buildDarwin()
 }
