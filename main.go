@@ -82,7 +82,7 @@ func makeTranslatePage() ui.Control {
 		}
 		text := strings.Replace(smle.Text(), "\n", "\\n", -1)
 		fmt.Printf("%q\n", text)
-		translation, err := papago.Translate(text, sourceLang, targetLang)
+		translation, err := papago.Translate(text, sourceLang, targetLang, papago.TranslateOptions{})
 		if err != nil {
 			log.Fatal(err)
 		}
